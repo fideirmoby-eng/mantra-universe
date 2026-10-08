@@ -1,0 +1,8 @@
+/* ═══════════════════════════════════════════════════════════════════
+   MANTRA Universe — typography.css
+   RETIRED AS SEPARATE IMPORT.
+   All typography classes (.type-mantra, .type-title, .type-meta, etc.)
+   have been consolidated into globals.css under @layer components.
+   This file is intentionally empty to avoid duplicate @layer errors
+   in Vite's CSS pipeline.
+   ═══════════════════════════════════════════════════════════════════ */

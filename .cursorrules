@@ -1,0 +1,60 @@
+# MANTRA Universe — Cursor Rules
+# These rules apply to all AI assistance within this repository.
+# Source of truth: PROJECT-5_2.md + IMPLEMENTATION_BLUEPRINT.md
+
+## Project identity
+This is MANTRA Universe — a living digital archive for the artist MANTRA.
+It is a static React SPA deployed to Vercel/Netlify.
+Every decision serves the artwork. The platform is a vessel, not a product.
+
+## Stack (non-negotiable)
+- React 18 + Vite 5
+- Tailwind CSS 3 + CSS custom properties (src/styles/globals.css)
+- Framer Motion — all page and UI transitions
+- GSAP — hero SplitText and CountUp only
+- Lenis — global smooth scroll (singleton in src/lib/lenis.js)
+- React Router v6
+- No SSR, no backend, no Redux, no styled-components
+
+## Path aliases (all defined in vite.config.js + jsconfig.json)
+@/            → src/
+@components/  → src/components/
+@pages/       → src/pages/
+@hooks/       → src/hooks/
+@utils/       → src/utils/
+@data/        → src/data/
+@styles/      → src/styles/
+@lib/         → src/lib/
+@assets/      → src/assets/
+@context/     → src/context/
+
+## Code conventions
+- Named exports for components; default exports for pages
+- Hooks-only React. No class components.
+- No magic numbers — all values reference CSS tokens or named constants
+- Variant props use string unions: mode="void" not isDark={true}
+- Animation variants defined outside JSX, never inline
+- File length limit: 200 lines per component
+- Import order: React → third-party → hooks → utils → components → data → assets
+
+## Design system
+- Colors: --void (#0A0A08), --paper (#F5F0E8), --gold (#C9A84C)
+- Fonts: Inter (UI), Cormorant Garamond (display/mantras), DM Sans (editorial), Space Mono (metadata)
+- Zero border-radius on images and cards. Radius only on interactive elements (buttons: 4px).
+- Animate only transform and opacity. Never width/height/top/left/margin/padding.
+
+## Sprint discipline
+- Never implement features outside the current sprint without explicit approval
+- Current sprint state is tracked in IMPLEMENTATION_BLUEPRINT.md
+- Sprints 0 and 1 are complete. Sprint 2 is next (atomic UI components).
+
+## Accessibility (non-negotiable)
+- Every interactive element reachable by Tab
+- Focus ring always visible using --focus-ring token
+- MenuOverlay traps focus when open
+- Custom cursor hidden on touch devices and prefers-reduced-motion
+- All images have meaningful alt text
+
+## URLs are permanent
+- /works/[id] URLs are printed on QR codes and can never change
+- If an artwork is removed, redirect to /works — never 404

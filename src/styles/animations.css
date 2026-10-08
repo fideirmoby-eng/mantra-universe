@@ -1,0 +1,9 @@
+/* ═══════════════════════════════════════════════════════════════════
+   MANTRA Universe — animations.css
+   RETIRED AS SEPARATE IMPORT.
+   All @keyframes definitions, .animate-* utilities, .skeleton,
+   and animation delay helpers have been consolidated into globals.css
+   under @layer base, @layer utilities, and @layer components.
+   This file is intentionally empty to avoid duplicate @layer errors
+   in Vite's CSS pipeline.
+   ═══════════════════════════════════════════════════════════════════ */

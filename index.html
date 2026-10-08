@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─── Primary Meta ─────────────────────────────────────── -->
+    <title>MANTRA — Artist</title>
+    <meta name="description" content="The digital universe of MANTRA — a living archive of artworks, projects, and the philosophy behind them." />
+    <meta name="theme-color" content="#0A0A08" />
+
+    <!-- ─── Open Graph ───────────────────────────────────────── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="MANTRA Universe" />
+    <meta property="og:title"       content="MANTRA — Artist" />
+    <meta property="og:description" content="A living archive of artworks, projects, and the philosophy behind them." />
+    <meta property="og:image"       content="/og-default.jpg" />
+
+    <!-- ─── Twitter Card ─────────────────────────────────────── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="MANTRA — Artist" />
+    <meta name="twitter:description" content="A living archive of artworks, projects, and the philosophy behind them." />
+    <meta name="twitter:image"       content="/og-default.jpg" />
+
+    <!-- ─── Favicon (placeholder — Sprint 1 adds real assets) ── -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- ─── Google Fonts ─────────────────────────────────────── -->
+    <!--
+      Four-family type system per PROJECT-5 specification:
+        1. Inter          — UI, navigation, body, metadata (300, 400)
+        2. Cormorant Garamond — mantras, hero titles, editorial (300, 400, 400 italic)
+        3. DM Sans        — artwork stories, secondary editorial (300, 400)
+        4. Space Mono     — metadata, dimensions, technical data (400)
+
+      preconnect: reduces DNS + TLS handshake latency.
+      display=swap: ensures text renders immediately in fallback font.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&family=Inter:wght@300;400&family=Space+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ─── Performance hints ────────────────────────────────── -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  </head>
+
+  <body>
+    <!--
+      #root is the React mount point.
+      Background set here to avoid flash of white before React hydrates.
+    -->
+    <div id="root" style="background-color: #0A0A08; min-height: 100vh;"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

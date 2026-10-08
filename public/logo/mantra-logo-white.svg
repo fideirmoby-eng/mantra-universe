@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 32" fill="none" aria-label="MANTRA">
+  <!-- MANTRA wordmark — white variant for void/dark backgrounds -->
+  <!-- Geometric letterforms reflecting the precise, timeless aesthetic of the design system -->
+  <text
+    x="0"
+    y="24"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="300"
+    font-size="22"
+    letter-spacing="0.18em"
+    fill="#F5F0E8"
+  >MANTRA</text>
+</svg>

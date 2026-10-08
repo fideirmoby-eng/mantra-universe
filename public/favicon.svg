@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- MANTRA favicon — M lettermark on void background -->
+  <rect width="32" height="32" fill="#0A0A08"/>
+  <!-- Stylised M with gold accent line beneath -->
+  <text
+    x="3"
+    y="23"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="300"
+    font-size="20"
+    letter-spacing="0.05em"
+    fill="#F5F0E8"
+  >M</text>
+  <!-- Gold accent line — mirrors the gold token -->
+  <rect x="3" y="26" width="26" height="1" fill="#C9A84C" opacity="0.8"/>
+</svg>

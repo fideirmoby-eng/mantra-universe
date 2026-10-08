@@ -1,0 +1,8 @@
+export { default as hero } from './hero'
+export { default as universe } from './universe'
+export { default as principles } from './principles'
+export { default as manifesto } from './manifesto'
+export { default as artist } from './artist'
+export { default as practice } from './practice'
+export { default as timeline } from './timeline'
+export { default as faq } from './faq'
