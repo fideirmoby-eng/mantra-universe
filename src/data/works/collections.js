@@ -6,14 +6,12 @@ import { videoArt } from './video-art'
 
 import { watercolors } from './watercolors'
 
+import { smallPaintings } from './small-paintings'
+
 export const workCollections = {
-
   paintings,
-
+  'small-paintings': smallPaintings,
   tattoos,
-
   'video-art': videoArt,
-
   watercolors,
-
 }

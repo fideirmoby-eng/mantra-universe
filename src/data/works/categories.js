@@ -8,7 +8,7 @@ export const workCategories = [
   {
     id: 'small-paintings',
     label: 'Small Format Paintings',
-    enabled: false,
+    enabled: true,
   },
 
   {
