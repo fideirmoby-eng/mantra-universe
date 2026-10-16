@@ -1,3 +1,4 @@
+
 export const workCategories = [
   {
     id: 'paintings',
@@ -31,8 +32,8 @@ export const workCategories = [
 
   {
     id: 'sculptures',
-    label: 'Sculptures',
-    enabled: false,
+    label: 'Objects & Installations',
+    enabled: true,
   },
 
   {
@@ -46,4 +47,4 @@ export const workCategories = [
     label: 'Performance',
     enabled: false,
   },
-]
+];
