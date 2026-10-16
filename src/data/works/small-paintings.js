@@ -7,6 +7,7 @@ import popStyleImage from '../../assets/artworks/small-paintings/pop-style.png';
 import nevermindImage from '../../assets/artworks/small-paintings/nevermind.png';
 import neverSurrenderImage from '../../assets/artworks/small-paintings/never-surrender.png';
 import intoArtImage from '../../assets/artworks/small-paintings/into-art.png';
+import theKingImage from '../../assets/artworks/small-paintings/the-king.png';
 
 export const smallPaintings = [
   {
@@ -208,6 +209,32 @@ export const smallPaintings = [
 
     beyondTheCanvas:
       'INTO ART reminds us that creativity is not merely an object we produce, but a way of transforming what we feel and experience into something meaningful.\n\nTransform instinct into expression. Turn experience into art.',
+  },
+
+  {
+    id: 'small-painting-009',
+    slug: 'the-king',
+    title: 'THE KING',
+    year: '2024',
+    category: 'small-paintings',
+    image: theKingImage,
+
+    description:
+      'THE KING explores power, identity, and artistic rebellion through a striking portrait surrounded by graffiti, fragmented text, and symbolic imagery. Inspired by the visual language of Basquiat, the work challenges the boundaries between authority, self-expression, and chaos.',
+
+    artworkDetails: {
+      medium: 'Mixed Media and Collage on Canvas',
+      dimensions: '66 × 66 cm',
+    },
+
+    introduction:
+      "THE KING presents a figure crowned by symbols, words, and contradictions. Against an explosive orange background, the portrait becomes a reflection on recognition, individuality, and the struggle to define one's own identity.",
+
+    curatorialEssay:
+      'Through layered collage, expressive marks, and contrasting imagery, the work examines the relationship between power and vulnerability. The crown becomes a symbol of authority and self-assertion, while the surrounding chaos questions the structures that determine who is allowed to reign.',
+
+    beyondTheCanvas:
+      'Who defines a king: society, power, or the individual? THE KING invites us to reconsider the meaning of greatness and the price of remaining true to oneself in a world that constantly demands conformity.',
   },
 ];
 
