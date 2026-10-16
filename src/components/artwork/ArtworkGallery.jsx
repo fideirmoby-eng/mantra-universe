@@ -1,11 +1,9 @@
+
 import { useEffect, useState } from 'react'
-
 import { motion } from 'framer-motion'
-
 import { Link } from 'react-router-dom'
 
 import { ArtworkImage } from '@components/ui/ArtworkImage'
-
 import { getLenis } from '@lib/lenis'
 
 export default function ArtworkGallery({ artworks = [] }) {
@@ -21,7 +19,6 @@ export default function ArtworkGallery({ artworks = [] }) {
     }
 
     document.addEventListener('keydown', handleKeyDown)
-
     document.body.style.overflow = 'hidden'
 
     return () => {
@@ -45,6 +42,17 @@ export default function ArtworkGallery({ artworks = [] }) {
         {artworks.map((artwork) => {
           const isVideoArt = artwork.category === 'video-art'
           const isWatercolor = artwork.category === 'watercolors'
+          const isPoster = artwork.category === 'posters'
+
+          const rememberScrollPosition = () => {
+            const lenis = getLenis()
+            const position = lenis ? lenis.scroll : window.scrollY
+
+            sessionStorage.setItem(
+              `works-scroll-position-${artwork.category}`,
+              String(position)
+            )
+          }
 
           if (isVideoArt) {
             return (
@@ -75,22 +83,32 @@ export default function ArtworkGallery({ artworks = [] }) {
             )
           }
 
+          // POSTERS: editorial image grid, no visible text.
+          if (isPoster) {
+            return (
+              <Link
+                key={artwork.id}
+                to={`/works/${artwork.category}/${artwork.slug}`}
+                onClick={rememberScrollPosition}
+                aria-label="Open poster"
+                className="group block min-w-0 overflow-hidden"
+              >
+                <ArtworkImage
+                  src={artwork.image}
+                  alt=""
+                  aspect="2/3"
+                  fit="contain"
+                  className="w-full transition duration-500 group-hover:opacity-90"
+                />
+              </Link>
+            )
+          }
+
           return (
             <Link
               key={artwork.id}
               to={`/works/${artwork.category}/${artwork.slug}`}
-              onClick={() => {
-                const lenis = getLenis()
-
-                const position = lenis
-                  ? lenis.scroll
-                  : window.scrollY
-
-                sessionStorage.setItem(
-                  `works-scroll-position-${artwork.category}`,
-                  String(position)
-                )
-              }}
+              onClick={rememberScrollPosition}
               className="group block min-w-0 transition duration-300 hover:opacity-90"
             >
               {isWatercolor ? (

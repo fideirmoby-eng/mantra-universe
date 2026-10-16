@@ -21,7 +21,7 @@ export const workCategories = [
   {
     id: 'posters',
     label: 'Posters',
-    enabled: false,
+    enabled: true,
   },
 
   {
@@ -47,4 +47,4 @@ export const workCategories = [
     label: 'Performance',
     enabled: false,
   },
-];
+]

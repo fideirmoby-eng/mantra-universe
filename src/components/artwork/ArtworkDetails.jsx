@@ -19,6 +19,7 @@ export default function ArtworkDetails({
   if (!artwork) return null
 
   const isVideoArt = artwork.category === 'video-art'
+  const isPoster = artwork.category === 'posters'
 
   const images =
     Array.isArray(artwork.images) && artwork.images.length > 0
@@ -27,6 +28,32 @@ export default function ArtworkDetails({
         ? [artwork.image]
         : []
 
+  // POSTERS: full-screen image only.
+  if (isPoster) {
+    return (
+      <motion.main
+        className="fixed inset-0 z-[9999] flex h-[100dvh] w-full items-center justify-center overflow-hidden bg-black p-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
+      >
+        {images.length > 0 ? (
+          <img
+            src={images[activeImage]}
+            alt=""
+            draggable="false"
+            className="block h-full w-full select-none object-contain"
+          />
+        ) : (
+          <div className="text-sm text-white/50">
+            Image unavailable
+          </div>
+        )}
+      </motion.main>
+    )
+  }
+
+  // EXISTING LAYOUT: all other artwork categories.
   return (
     <motion.section
       className="mx-auto max-w-6xl px-6 py-24"

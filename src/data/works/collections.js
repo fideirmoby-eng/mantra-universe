@@ -5,6 +5,7 @@ import { videoArt } from './video-art'
 import { watercolors } from './watercolors'
 import { smallPaintings } from './small-paintings'
 import { objectsInstallations } from './objects-installations'
+import { posters } from './posters'
 
 export const workCollections = {
   paintings,
@@ -13,4 +14,5 @@ export const workCollections = {
   'video-art': videoArt,
   watercolors,
   sculptures: objectsInstallations,
+  posters,
 }
